@@ -109,37 +109,4 @@ text
 
 ---
 
-### ✅ Tips before uploading
 
-1. **Add a `.gitignore`** to keep the repo clean:
-   ```gitignore
-   results/
-   *.bin
-   *.safetensors
-   __pycache__/
-   .ipynb_checkpoints/
-   *.csv
-Push commands:
-
-bash
-git init
-git add README.md imdb-reviews-sentiment-analysis-bert-model.ipynb .gitignore
-git commit -m "Add BERT fine-tuning on IMDB sentiment + README"
-git branch -M main
-git remote add origin https://github.com/behrouzyou/imdb-sentimental-bert.git
-git push -u origin main
-Optional — share the trained model: If you want to include the fine-tuned weights (checkpoint is ~440 MB), don't push it to GitHub directly. Instead:
-
-Upload to Hugging Face Hub → your-username/imdb-bert-sentiment
-
-Reference it in the README:
-
-python
-model = AutoModelForSequenceClassification.from_pretrained("your-username/imdb-bert-sentiment")
-Optional — add badges to the top of the README:
-
-markdown
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.x-red)
-![Transformers](https://img.shields.io/badge/Transformers-HuggingFace-yellow)
-![License](https://img.shields.io/badge/License-MIT-green)
